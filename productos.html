@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title> 
+    <link rel="stylesheet" href="css/stylesProductos.css"> 
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="productos.html">Productos</a></li> 
+                <li><a href="contacto.html">Contacto</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="productos-lista"></div> <!-- Contenedor para la lista de productos, se completa con JavaScript -->
+        <div class="total-container">
+            <p id="mensaje"></p> <!-- Parrafo para mostrar mensajes al usuario, como el total de la compra o errores (se genera despues de presionar el boton comprar) -->
+            <div class="opciones-pago">
+                <h2>Selecciona un método de pago</h2> <!-- Titulo para la sección de opciones de pago -->
+                <label>
+                    <input type="radio" name="pago" value="tarjeta" /> <!-- Input para seleccionar pago por transferencia -->
+                    <img src="./data/Transferencia.png" alt="Tarjeta de crédito" /> <!-- Imagen para pago por transferencia -->
+                    Transferencia
+                </label>
+                <label>
+                    <input type="radio" name="pago" value="debito" /> <!-- Input para seleccionar pago con tarjeta de débito/crédito -->
+                    <img src="./data/Tarjeta.png" alt="Débito" /> <!-- Imagen para tarjeta de débito/crédito -->
+                    Tarjeta Debito/Credito
+                </label>
+                <label>
+                    <input type="radio" name="pago" value="efectivo" /> <!-- Input para seleccionar pago en efectivo -->
+                    <img src="./data/Efectivo.png" alt="Efectivo" /> <!-- Imagen para pago en efectivo -->
+                    Efectivo
+                </label>
+            </div>
+            <button onclick="comprar()">Comprar</button> <!-- Boton para iniciar la compra, llama a la funcion comprar() al hacer clic -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Canosa Pablo-Vázquez Manuel</p> <!-- Mensaje de copyright -->
+    </footer>
+</body>
+
+<script src="js/productos.js"></script> <!-- Script JavaScript que maneja la lógica de la página de productos -->
+
+</html>

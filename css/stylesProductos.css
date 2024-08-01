@@ -1,0 +1,124 @@
+/* Solo se comento el css el index; se trato con la misma logica a contacto y productos */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    background-color: #f4f4f4;
+}
+
+#productos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1.5em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.producto span {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.producto .precio {
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+.producto .stock {
+    color: #888;
+}
+
+.total-container {
+    margin-top: 2em;
+    text-align: center;
+}
+
+#mensaje {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 1em;
+}
+
+.opciones-pago {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.opciones-pago label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opciones-pago img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    margin-top: 2em;
+}

@@ -1,0 +1,136 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina margenes */
+    padding: 0; /* Elimina padding */
+    line-height: 1.6; /* Altura de línea */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    display: flex; /* Uso flexbox para alinear */
+    flex-direction: column; /* Ordeno en columna */
+    min-height: 100vh; /* Altura minima de la pag. */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 1em 0; /* Espaciado interno */
+    text-align: center; /* Alineación centrada */
+}
+
+/* Estilos para la navegación */
+header nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; /* Centra elementos */
+}
+
+/* Estilos para los elementos de la lista de navegación */
+header nav ul li {
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+/* Estilos para los links de la barra*/
+header nav ul li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado (sin esta linea home, productos, y contactos quedan subrayados) */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto hover en los links de la barra */
+header nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar la flechita */
+}
+
+/* Estilos para el contenedor principal */
+main {
+    flex: 1; /* Flex para ocupar espacio */
+    padding: 2em; /* Espaciado interno */
+    background-color: #f4f4f4; /* Fondo gris claro */
+}
+
+/* Contenedor de secciones */
+.container {
+    display: flex; 
+    flex-wrap: wrap; /* Permite que los elementos se "envuelvan" */
+    justify-content: space-between; /* Distribucion pareja */
+    gap: 1.5em; /* Espacio entre elementos */
+}
+
+/* Estilos para las secciones */
+section {
+    background-color: #fff; /* Fondo blanco */
+    padding: 1.5em; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    flex: 1 1 45%; /* Ancho de las secciones */
+    transition: transform 0.3s; /* Transición suave en transformaciones (con esta linea, al pasar de una seccion a otra, el movimiento es "suave", si no, se nota un rebote al cambiar de seccion) */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Efecto hover en las secciones */
+section:hover {
+    transform: translateY(-5px); /* Mueve la seccion hacia arriba al pasar la flechita */
+}
+
+/* Estilos para los encabezados de las secciones */
+section h2 {
+    color: #333; /* Texto gris oscuro */
+    border-bottom: 3px solid #007BFF; /* Linea azul debajo del texto */
+    padding-bottom: 0.5em; /* Espaciado debajo del texto */
+    font-size: 1.5em; /* Tamaño de fuente */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Alineado al medio */
+}
+
+/* Estilos para el contenido de las secciones */
+section p {
+    color: #666; /* Texto gris un poco mas claro que el del titulo (para que se diferencien) */
+    font-size: 1.1em; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de linea */
+    text-align: center; 
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Alineacion centrada */
+    padding: 1em 0; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    margin-top: 2em; /* Espaciado superior */
+}
+
+/* Oferta */
+
+/* Estilo para el contenedor de la oferta */
+.oferta {
+    border: 2px dashed red; /* Borde rojo punteado alrededor del contenedor de la oferta */
+    padding: 1.5em; /* Relleno interno alrededor del contenido */
+    background-color: #fff8f8; /* Color de fondo para resaltar el contenedor de la oferta */
+    border-radius: 8px; /* Redondea las esquinas del contenedor */
+    text-align: center; /* Centra el texto */
+    flex: 1 1 100%; /* Hace que el contenedor ocupe toda la anchura disponible del espacio asignado en el layout flexbox */
+}
+
+/* Boton de oferta */
+
+.boton-oferta {
+    display: inline-block; /* Hace que el boton se comporte como un elemento alineado con el bloque (contenedor)*/
+    padding: 10px 20px; 
+    color: #fff;    /* Color del texto, blanco */
+    background-color: #007BFF;     /* Color azul para el fondo del boton */
+    text-decoration: none;     /* Elimina el subrayado del texto del boton */
+    border-radius: 5px;     /* Redondea las esquinas del boton */
+    margin-top: 10px;     /* Añade un margen en la parte superior para separar el boton del texto del producto */
+}
+
+/* Hover en el boton de oferta */
+.boton-oferta:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón a un azul mas oscuro al pasar la flechita */
+}
+

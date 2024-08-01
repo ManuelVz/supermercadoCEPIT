@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title> <!-- Establezco el título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/stylesIndex.css"> <!-- Vinculo el archivo CSS para aplicar estilos a la página -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Navegacion principal con enlaces a las diferentes secciones del sitio -->
+                <li><a href="index.html">Home</a></li> <!-- Enlace a la pagina principal -->
+                <li><a href="productos.html">Productos</a></li> <!-- Enlace a la pagina de productos -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a la pagina de contacto -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Seccion de la historia del supermercado -->
+            <section class="historia">
+                <h2>Nuestra Historia</h2> <!-- Título de la sección de historia -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna nec leo interdum luctus. Cras ac lorem ac lacus vestibulum congue a at nisl. Ut sollicitudin velit ut tortor varius, nec facilisis urna facilisis.</p> <!-- Texto de la historia -->
+                <img id="imgSuper" src="https://thumbs.dreamstime.com/b/colmado-del-supermercado-130146115.jpg" alt="Imagen del supermercado"> <!-- Imagen representativa del supermercado -->
+            </section>
+            <!-- Seccion de descripcion del supermercado -->
+            <section class="descripcion">
+                <h2>Descripción</h2> <!-- Titulo de la seccion de descripción -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna nec leo interdum luctus. Cras ac lorem ac lacus vestibulum congue a at nisl. Ut sollicitudin velit ut tortor varius, nec facilisis urna facilisis.</p> <!-- Texto descriptivo del supermercado -->
+            </section>
+            <!-- Seccion de informacion general -->
+            <section class="informacion-general">
+                <h2>Información General</h2> <!-- Titulo de la seccion de información general -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna nec leo interdum luctus. Cras ac lorem ac lacus vestibulum congue a at nisl. Ut sollicitudin velit ut tortor varius, nec facilisis urna facilisis. Fusce sed libero libero. Integer ut ligula in nunc volutpat ultricies a et nisi.</p> <!-- Texto con información general sobre el supermercado -->
+            </section>
+            <!-- Aca se va a inyectar una oferta aleatoria -->
+            <div class="oferta">
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Canosa Pablo-Vázquez Manuel</p> <!-- Footer con nuestros nombres -->
+    </footer>
+</body>
+
+<!-- Incluyo los archivos js necesarios para generar la oferta (los cargo aca abajo, para no tener problemas con el dom)-->
+<script defer src="js/productos.js"></script> 
+<script defer src="js/oferta.js"></script> 
+</html>
