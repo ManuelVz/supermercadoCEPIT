@@ -1,6 +1,31 @@
-function guardarContacto(event) {
-    // Evito que el formulario se envíe de forma predeterminada para poder manejar el envío manualmente
-    event.preventDefault();
+function validarCampos(nombre, apellido, email, telefono, consulta) {
+
+    // Defino constantes que voy a utilizar para validar
+    const soloLetras = /^[A-Za-z]+$/; //Solo letras ^inicio de cadena; + al menos 1 caracter; $ final cadena
+    const soloNumeros = /^\d+$/; //Solo numeros
+ 
+    
+    // Validaciones para todos los campos
+    if (!nombre || !apellido || !email || !telefono || !consulta) {
+        return 'Todos los campos son obligatorios.';
+    }
+    if (!soloLetras.test(nombre)) {
+        return 'El nombre debe contener solo letras.';
+    }
+    if (!soloLetras.test(apellido)) {
+        return 'El apellido debe contener solo letras.';
+    }
+    if (!soloNumeros.test(telefono) || telefono.length !== 10) {
+        return 'El telefono debe contener exactamente 10 caracteres numericos.';
+    }
+    if (consulta.length < 10) {
+        return 'La consulta debe tener al menos 10 caracteres.';
+    }
+    
+    return ''; // Retorna una cadena vacia si todas las validaciones son correctas
+}
+
+function guardarContacto() {
 
     // Obtengo el valor ingresado en los campos del formulario
     const nombre = document.getElementById('nombre').value;
@@ -8,6 +33,15 @@ function guardarContacto(event) {
     const email = document.getElementById('email').value;
     const telefono = document.getElementById('telefono').value;
     const consulta = document.getElementById('consulta').value;
+
+    // Respuesta de la validacion
+    const mensajeError = validarCampos(nombre, apellido, email, telefono, consulta); //Me devuelve el resultado de la funcion de validacion (mensaje vacio, o error)
+    
+    // Si hay errores, mostrar el mensaje y salir
+    if (mensajeError) {
+        document.getElementById('mensaje-contacto').innerText = mensajeError;
+        return;
+    }
 
     // Creo una cadena de texto con todos los datos del contacto 
     const data = `Nombre: ${nombre}, Apellido: ${apellido}, Email: ${email}, Teléfono: ${telefono}, Consulta: ${consulta}\n`;
@@ -36,3 +70,4 @@ function guardarContacto(event) {
     // Capturo el elemento "mensaje-contacto" (inicialmente en blanco), y le asigno el texto que se va a ver en pantalla luego de apretar enviar
     document.getElementById('mensaje-contacto').innerText = 'Consulta enviada correctamente.';
 }
+
