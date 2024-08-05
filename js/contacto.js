@@ -25,9 +25,9 @@ function validarCampos(nombre, apellido, email, telefono, consulta) {
     return ''; // Retorna una cadena vacia si todas las validaciones son correctas
 }
 
-function guardarContacto() {
-
+function guardarContacto(event) {
     // Obtengo el valor ingresado en los campos del formulario
+    event.preventDefault(); //Evita que se ejecute automaticamente (sin esto, solo se ve un pestañazo)
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const email = document.getElementById('email').value;
